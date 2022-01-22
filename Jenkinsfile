@@ -1,16 +1,15 @@
 pipeline {
     environment {
-    registry = "battiseashish24/nodejs-build"
-    registryCredential = "dockerhub"
+    registry = "naistangz/docker_automation"
+    registryCredential = 'dockerhub'
     dockerImage = ''
-    PATH = "$PATH:/usr/local/bin"
-}
+    }
 
-    agent {'docker'}
+    agent any
     stages {
             stage('Cloning our Git') {
                 steps {
-                git 'https://github.com/ashishbattise24/nodejs-project.git/'
+                git 'git@github.com:naistangz/Docker_Jenkins_Pipeline.git'
                 }
             }
 
@@ -34,7 +33,7 @@ pipeline {
 
             stage('Cleaning Up') {
                 steps{
-                  sh "docker rmi $registry:$BUILD_NUMBER"
+                  sh "docker rmi --force $registry:$BUILD_NUMBER"
                 }
             }
         }
