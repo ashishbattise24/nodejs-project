@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "naistangz/docker_automation"
+    registry = "battiseashish24/nodejs-build"
     registryCredential = 'dockerhub'
     dockerImage = ''
     }
