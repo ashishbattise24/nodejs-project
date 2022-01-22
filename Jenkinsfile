@@ -9,7 +9,7 @@ pipeline {
     stages {
             stage('Cloning our Git') {
                 steps {
-                git 'git@github.com:naistangz/Docker_Jenkins_Pipeline.git'
+                git 'https://github.com/ashishbattise24/nodejs-project.git'
                 }
             }
 
