@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copying everything from current location to default location inside the container
-COPY . .
+COPY . ./
 
 # Second stage of our build for production
 #FROM node:alpine
