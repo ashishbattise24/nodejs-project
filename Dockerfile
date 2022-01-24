@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Installing node package manager
-RUN npm install
+RUN npm install -g npm
 
 # Copying everything from current location to default location inside the container
 COPY . ./
